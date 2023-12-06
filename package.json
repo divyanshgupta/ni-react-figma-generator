@@ -1,43 +1,48 @@
 {
-  "name": "figma-plugin-react-template",
+  "name": "react-codegen",
   "version": "1.0.0",
-  "description": "This plugin template uses Typescript. If you are familiar with Javascript, Typescript will look very familiar. In fact, valid Javascript code is already valid Typescript code.",
-  "license": "ISC",
+  "description": "Your Figma plugin",
+  "main": "code.js",
   "scripts": {
+    "dev": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "build:watch": "webpack --mode=development --watch",
-    "prettier:format": "prettier --write '**/*.{js,jsx,ts,tsx,css,json}' "
+    "prettier": "prettier --write",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "test": "jest"
   },
+  "author": "",
+  "license": "",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@vanilla-extract/css": "^1.0.0",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.6"
   },
   "devDependencies": {
-    "@figma/plugin-typings": "^1.50.0",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "css-loader": "^6.7.1",
-    "html-webpack-plugin": "^5.5.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "react-dev-utils": "^12.0.1",
-    "style-loader": "^3.3.1",
-    "ts-loader": "^9.3.1",
-    "typescript": "^4.7.4",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,css,json}": [
-      "prettier --write",
-      "git add"
-    ]
+    "@babel/core": "7.13.15",
+    "@babel/preset-env": "7.13.15",
+    "@babel/preset-typescript": "7.13.0",
+    "@figma/plugin-typings": "1.33.0",
+    "@types/jest": "26.0.24",
+    "@types/react": "17.0.36",
+    "@types/react-dom": "17.0.3",
+    "@typescript-eslint/eslint-plugin": "4.20.0",
+    "@typescript-eslint/parser": "4.20.0",
+    "babel-jest": "27.0.6",
+    "css-loader": "5.2.5",
+    "eslint": "7.23.0",
+    "eslint-config-prettier": "8.1.0",
+    "figma-api-stub": "0.0.48",
+    "jest": "27.0.6",
+    "prettier": "2.2.1",
+    "style-loader": "2.0.0",
+    "ts-loader": "8.0.17",
+    "ts-node": "9.1.1",
+    "typescript": "4.2.2",
+    "url-loader": "4.1.1"
   }
 }

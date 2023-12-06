@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "outDir": "dist",
-    "jsx": "react",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "removeComments": true,
-    "noImplicitAny": false,
+    "strict": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "es2015",
     "moduleResolution": "node",
+    "jsx": "react",
     "typeRoots": ["./node_modules/@types", "./node_modules/@figma"]
   }
 }
